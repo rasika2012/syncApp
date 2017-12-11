@@ -38,8 +38,8 @@ export class MyApp {
   
     // set our app's pages
     this.pages = [
-      { title: 'Quick Acces', component: HelloIonicPage,icon: "paper-plane" },
-      { title: 'Advanced and Explore', component: ListPage ,icon: "boat"},
+      { title: 'One Touch Acces', component: ListPage ,icon: "paper-plane"},
+      { title: 'Quick Acces', component: HelloIonicPage,icon: "boat" },
       { title: 'Settings', component: SettingPage,icon: "build" }
     ]; 
   }

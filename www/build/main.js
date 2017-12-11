@@ -239,7 +239,7 @@ var ListPage = (function () {
     };
     ListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>My First List</ion-title>\n\n    \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n  <ion-list>\n    <ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src={{item.url}}>\n      </ion-thumbnail>\n      <h2>{{item.fName}}</h2>\n      <p>{{item.url}}</p>\n      <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>\n    </ion-item>\n  </ion-list>\n\n\n</ion-content>\n\n<ion-footer>\n    <ion-toolbar>\n        <button ion-button (click)="addDir()" >\n            <ion-icon name="add" ><span></span>Upload</ion-icon>\n          </button>\n          <button ion-button (click)="addDir()" >\n            <ion-icon name="add" ><span></span>Download</ion-icon>\n          </button>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>Sync Onece</ion-title>\n\n    \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n  <ion-list>\n    <ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src={{item.url}}>\n      </ion-thumbnail>\n      <h2>{{item.fName}}</h2>\n      <p>{{item.url}}</p>\n      <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n<ion-footer>\n    <ion-toolbar>\n        <button ion-button (click)="upload()" >\n            <ion-icon name="add" ><span></span>Upload</ion-icon>\n          </button>\n          <button ion-button (click)="download()" >\n            <ion-icon name="add" ><span></span>Download</ion-icon>\n          </button>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_photo_library__["a" /* PhotoLibrary */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_chooser__["a" /* FileChooser */]])
     ], ListPage);
@@ -491,8 +491,8 @@ var MyApp = (function () {
         this.initializeApp();
         // set our app's pages
         this.pages = [
-            { title: 'Quick Acces', component: __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__["a" /* HelloIonicPage */], icon: "paper-plane" },
-            { title: 'Advanced and Explore', component: __WEBPACK_IMPORTED_MODULE_3__pages_list_list__["a" /* ListPage */], icon: "boat" },
+            { title: 'One Touch Acces', component: __WEBPACK_IMPORTED_MODULE_3__pages_list_list__["a" /* ListPage */], icon: "paper-plane" },
+            { title: 'Quick Acces', component: __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__["a" /* HelloIonicPage */], icon: "boat" },
             { title: 'Settings', component: __WEBPACK_IMPORTED_MODULE_4__pages_setting_setting__["a" /* SettingPage */], icon: "build" }
         ];
     }
@@ -589,6 +589,7 @@ var LoginPage = (function () {
         this.password = '';
         this.data = {};
         this.errmsg = '';
+        this.ip = 'http://192.168.1.4/myphp/newP/inc/';
     }
     LoginPage.prototype.logNew = function () {
         var _this = this;
@@ -602,6 +603,10 @@ var LoginPage = (function () {
             }
         });
     };
+    LoginPage.prototype.setIP = function () {
+        this.storage.set('IP', this.ip);
+        this.authService.host = this.ip;
+    };
     LoginPage.prototype.createAcount = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__create_acount_create_acount__["a" /* CreateAcountPage */]);
     };
@@ -609,7 +614,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title><ion-icon name="paper-plane"></ion-icon>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" id="pw" [(ngModel)]="password"v></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div >\n    <button ion-button color="primary" block  (click)="logNew()">LogIn</button>\n    <button ion-button color="dark" block (click)="createAcount()">Create Acount</button>\n  </div>\n  <ion-label floating>{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title><ion-icon name="paper-plane"></ion-icon>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n    <ion-item>\n\n      <ion-label floating>SetYour IP</ion-label>\n        <ion-input type="text" [(ngModel)]="ip">http://192.168.1.4/myphp/newP/inc/</ion-input>\n      </ion-item>\n      <ion-item>\n        <button ion-button  block (click)="setIP()">Set</button>\n    </ion-item>\n    \n    <br>\n    <br>\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" id="pw" [(ngModel)]="password"v></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div >\n    <button ion-button color="primary" block  (click)="logNew()">LogIn</button>\n    <button ion-button color="dark" block (click)="createAcount()">Create Acount</button>\n  </div>\n  <ion-label floating>{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_http__["a" /* HTTP */], __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["a" /* HttpClient */]])
     ], LoginPage);
@@ -706,12 +711,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AuthService = (function () {
     function AuthService(http, storage, file) {
+        var _this = this;
         this.http = http;
         this.storage = storage;
         this.file = file;
         this.host = 'http://192.168.1.4/myphp/newP/inc/';
         this.hostNet = 'http://projecte14.atwebpages.com/inc/';
         console.log('Hello AuthService Provider');
+        this.storage.get('IP').then(function (res) {
+            _this.host = res;
+        });
     }
     AuthService.prototype.postData = function (credentials, type) {
     };
@@ -765,10 +774,6 @@ var AuthService = (function () {
     AuthService.prototype.getLocalList = function () {
         var _this = this;
         this.items = [];
-        this.items.push({
-            fName: "ss",
-            url: "D:/ShortSem/Project/MyIonicProject/resources/icon.png"
-        });
         this.file.listDir("file:///storage/emulated/0/DCIM", "Camera").then(function (results) {
             for (var i = 0; i < results.length; i++) {
                 console.log('Image URI: ' + results[i]);

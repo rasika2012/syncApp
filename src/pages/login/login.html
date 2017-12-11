@@ -16,7 +16,17 @@
 <ion-content padding>
   <ion-list>
     
+    <ion-item>
 
+      <ion-label floating>SetYour IP</ion-label>
+        <ion-input type="text" [(ngModel)]="ip">http://192.168.1.4/myphp/newP/inc/</ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button  block (click)="setIP()">Set</button>
+    </ion-item>
+    
+    <br>
+    <br>
     <ion-item>
       <ion-label floating>Username</ion-label>
       <ion-input type="text" [(ngModel)]="username"></ion-input>

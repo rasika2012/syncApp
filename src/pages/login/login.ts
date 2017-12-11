@@ -27,7 +27,7 @@ export class LoginPage {
   password = '';
   data = {};
   errmsg='';
-
+  ip='http://192.168.1.4/myphp/newP/inc/'
 
   
 
@@ -51,7 +51,10 @@ export class LoginPage {
         
       
     }
-  
+  setIP(){
+    this.storage.set('IP',this.ip);
+    this.authService.host=this.ip;
+  }
 
 
   createAcount() {

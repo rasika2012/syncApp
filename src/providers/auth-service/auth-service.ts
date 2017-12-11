@@ -20,6 +20,9 @@ export class AuthService {
 
 constructor(private http: HttpClient,private storage: Storage  ,private file: File) {
     console.log('Hello AuthService Provider');
+    this.storage.get('IP').then(res=>{
+      this.host=res;
+    })
 }
 
 postData(credentials, type) {
