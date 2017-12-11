@@ -7,10 +7,12 @@ import { HttpClient } from '@angular/common/http';
 import { errorHandler } from '@angular/platform-browser/src/browser';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
 import { HelloIonicPage } from '../../pages/hello-ionic/hello-ionic';
+import { AlertController } from 'ionic-angular';
 
 import {MyApp} from '../../app/app.component';
 import { File } from '@ionic-native/file';
 import 'rxjs/add/operator/map';
+import { Alert } from 'ionic-angular/components/alert/alert';
 
 
 
@@ -18,7 +20,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthService {
 
-constructor(private http: HttpClient,private storage: Storage  ,private file: File) {
+constructor(private http: HttpClient,private storage: Storage  ,private file: File,public alertCtrl: AlertController) {
     console.log('Hello AuthService Provider');
     this.storage.get('IP').then(res=>{
       this.host=res;
@@ -44,6 +46,15 @@ login(username,password){
       });  
     },
     (err: HttpErrorResponse)=>{
+     
+        let alert = this.alertCtrl.create({
+          title: 'Loging Failed',
+          subTitle: 'Check your User name and Password or net connection',
+          buttons: ['OK']
+        });
+        
+        alert.present();
+        
         this.storage.set('errorMassege',  'Something went wrong');
         return false;
     });
