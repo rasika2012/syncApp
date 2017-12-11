@@ -35,13 +35,7 @@ export class MyApp {
    
   ) {
     this.initializeApp();
-    this.storage.get('uname').then((val) => {
-      
-       if(val==null){
-         console.log('Your uname is', val);
-         this.nav.setRoot(LoginPage);
-       }
-   });
+  
     // set our app's pages
     this.pages = [
       { title: 'Quick Acces', component: HelloIonicPage,icon: "paper-plane" },
@@ -55,7 +49,16 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
+      this.storage.get('uname').then((val) => {
+        
+         if(val==null){
+           console.log('Your uname is', val);
+           this.nav.setRoot(LoginPage);
+         }
+     }).then(data=>{
       this.splashScreen.hide();
+     })
+      
 
       
      

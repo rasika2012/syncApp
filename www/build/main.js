@@ -7,9 +7,9 @@ webpackJsonp([3],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_file__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_photo_library__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_file__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_photo_library__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,7 +61,7 @@ var BrowserPage = (function () {
     };
     BrowserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-browser',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\browser\browser.html"*/'<!--\n  Generated template for the BrowserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Quick Upload</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <button ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src=" {{item.note}}">\n      </ion-thumbnail>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n\n \n\n\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\browser\browser.html"*/,
+            selector: 'page-browser',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\browser\browser.html"*/'<!--\n  Generated template for the BrowserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Quick Upload</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <button ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src=" {{item.note}}">\n      </ion-thumbnail>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n\n \n\n\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\browser\browser.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_photo_library__["a" /* PhotoLibrary */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */]])
     ], BrowserPage);
@@ -80,7 +80,7 @@ var BrowserPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(33);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -128,7 +128,7 @@ var CreateAcountPage = (function () {
     };
     CreateAcountPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-create-acount',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\create-acount\create-acount.html"*/'<!--\n  Generated template for the CreateAcountPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Create Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n       <ion-item>\n         <ion-label stacked>First Name</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Last Name</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Username</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.username"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Password</ion-label>\n         <ion-input type="password" [(ngModel)]="userData.password"></ion-input>\n       </ion-item>\n \n       <button ion-button full color="success" (click)="signup()">Sign up</button>\n       <a href="#" (click)="login()">Login Page</a>\n     </ion-list>\n     <ion-label >{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\create-acount\create-acount.html"*/,
+            selector: 'page-create-acount',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\create-acount\create-acount.html"*/'<!--\n  Generated template for the CreateAcountPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Create Account</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n       <ion-item>\n         <ion-label stacked>First Name</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Last Name</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Username</ion-label>\n         <ion-input type="text" [(ngModel)]="userData.username"></ion-input>\n       </ion-item>\n \n       <ion-item>\n         <ion-label stacked>Password</ion-label>\n         <ion-input type="password" [(ngModel)]="userData.password"></ion-input>\n       </ion-item>\n \n       <button ion-button full color="success" (click)="signup()">Sign up</button>\n       <a href="#" (click)="login()">Login Page</a>\n     </ion-list>\n     <ion-label >{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\create-acount\create-acount.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
     ], CreateAcountPage);
@@ -196,10 +196,11 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_chooser__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_photo_library__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_photo_library__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -215,81 +216,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ListPage = (function () {
-    function ListPage(navCtrl, photoLibrary, file, navParams, fileChooser) {
-        var _this = this;
+    function ListPage(navCtrl, auth, photoLibrary, file, navParams, fileChooser) {
         this.navCtrl = navCtrl;
+        this.auth = auth;
         this.photoLibrary = photoLibrary;
         this.file = file;
         this.navParams = navParams;
         this.fileChooser = fileChooser;
-        this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-            'american-football', 'boat', 'bluetooth', 'build'];
         this.items = [];
-        this.items.push({
-            title: "ss",
-            note: "D:/ShortSem/Project/MyIonicProject/resources/icon.png",
-            icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-        });
-        this.file.listDir("file:///storage/emulated/0/DCIM", "Camera").then(function (results) {
-            for (var i = 0; i < results.length; i++) {
-                console.log('Image URI: ' + results[i]);
-                _this.items.push({
-                    title: results[i].name,
-                    note: results[i].nativeURL,
-                    icon: _this.icons[Math.floor(Math.random() * _this.icons.length)]
-                });
-            }
-        }, function (err) {
-        });
-        this.photoLibrary.requestAuthorization().then(function () {
-            _this.photoLibrary.getLibrary().subscribe({
-                next: function (library) {
-                    library.forEach(function (libraryItem) {
-                        this.items.push({
-                            title: libraryItem.photoURL,
-                            note: libraryItem.id,
-                            icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-                        }); // Cross-platform access to photo
-                        // array of ids of appropriate AlbumItem, only of includeAlbumsData was used
-                    });
-                },
-                error: function (err) {
-                    _this.items.push({
-                        title: err,
-                        note: "couldNotGet Libry",
-                        icon: _this.icons[Math.floor(Math.random() * _this.icons.length)]
-                    });
-                },
-                complete: function () {
-                    _this.items.push({
-                        title: "Done",
-                        note: "couldNotGet Libry",
-                        icon: _this.icons[Math.floor(Math.random() * _this.icons.length)]
-                    });
-                }
-            });
-        })
-            .catch(function (err) {
-            return _this.items.push({
-                title: "No permitions",
-                note: err,
-                icon: _this.icons[Math.floor(Math.random() * _this.icons.length)]
-            });
-        });
+        this.items = this.auth.getLocalList();
     }
     ListPage.prototype.addDir = function () {
-        var _this = this;
-        //this.openGallery();
-        this.fileChooser.open()
-            .then(function (uri) {
-            _this.items.push({
-                title: uri,
-                note: uri,
-                icon: _this.icons[Math.floor(Math.random() * _this.icons.length)]
-            });
-        })
-            .catch(function (e) { return _this.items.push(); });
+        this.items = [];
+        this.items = this.auth.getLocalList();
     };
     ListPage.prototype.itemTapped = function (event, item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__item_details_item_details__["a" /* ItemDetailsPage */], {
@@ -298,9 +239,9 @@ var ListPage = (function () {
     };
     ListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>My First List</ion-title>\n\n    \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n  <ion-list>\n    <ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src={{item.note}}>\n      </ion-thumbnail>\n      <h2>{{item.title}}</h2>\n      <p>{{item.note}}</p>\n      <button ion-button clear item-end (click)="itemTapped($event, item)">View</button>\n    </ion-item>\n  </ion-list>\n\n\n</ion-content>\n\n<ion-footer>\n    <ion-toolbar>\n        <button ion-button block (click)="addDir()" >\n            <ion-icon name="add" ><span></span>upload</ion-icon>\n          </button>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>My First List</ion-title>\n\n    \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n  <ion-list>\n    <ion-item *ngFor="let item of items" >\n      <ion-thumbnail item-start>\n        <img src={{item.url}}>\n      </ion-thumbnail>\n      <h2>{{item.fName}}</h2>\n      <p>{{item.url}}</p>\n      <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>\n    </ion-item>\n  </ion-list>\n\n\n</ion-content>\n\n<ion-footer>\n    <ion-toolbar>\n        <button ion-button (click)="addDir()" >\n            <ion-icon name="add" ><span></span>Upload</ion-icon>\n          </button>\n          <button ion-button (click)="addDir()" >\n            <ion-icon name="add" ><span></span>Download</ion-icon>\n          </button>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\list\list.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_photo_library__["a" /* PhotoLibrary */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_chooser__["a" /* FileChooser */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_photo_library__["a" /* PhotoLibrary */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_chooser__["a" /* FileChooser */]])
     ], ListPage);
     return ListPage;
 }());
@@ -316,7 +257,7 @@ var ListPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -367,7 +308,7 @@ var SettingPage = (function () {
     };
     SettingPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-setting',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\setting\setting.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Settings:{{userName}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-content>\n\n        <div padding>\n          <button ion-button color="dark" block (click)="logout()">Logout</button>\n          \n        </div>\n      \n       \n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\setting\setting.html"*/
+            selector: 'page-setting',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\setting\setting.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Settings:{{userName}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-content>\n\n        <div padding>\n          <button ion-button color="dark" block (click)="logout()">Logout</button>\n          \n        </div>\n      \n       \n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\setting\setting.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
     ], SettingPage);
@@ -401,8 +342,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_hello_ionic_hello_ionic__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_hello_ionic_hello_ionic__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_setting_setting__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(43);
@@ -410,14 +351,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_browser_browser__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_photo_library__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_photo_library__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_file_chooser__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_file__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_image_picker__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_file__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_image_picker__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_http__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_common_http__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_auth_service_auth_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_common_http__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_auth_service_auth_service__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -513,7 +454,7 @@ var AppModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_setting_setting__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(43);
@@ -540,7 +481,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = (function () {
     function MyApp(platform, menu, statusBar, splashScreen, storage) {
-        var _this = this;
         this.platform = platform;
         this.menu = menu;
         this.statusBar = statusBar;
@@ -549,12 +489,6 @@ var MyApp = (function () {
         // make HelloIonicPage the root (or first) page
         this.rootPage = __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__["a" /* HelloIonicPage */];
         this.initializeApp();
-        this.storage.get('uname').then(function (val) {
-            if (val == null) {
-                console.log('Your uname is', val);
-                _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */]);
-            }
-        });
         // set our app's pages
         this.pages = [
             { title: 'Quick Acces', component: __WEBPACK_IMPORTED_MODULE_2__pages_hello_ionic_hello_ionic__["a" /* HelloIonicPage */], icon: "paper-plane" },
@@ -568,7 +502,14 @@ var MyApp = (function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
+            _this.storage.get('uname').then(function (val) {
+                if (val == null) {
+                    console.log('Your uname is', val);
+                    _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */]);
+                }
+            }).then(function (data) {
+                _this.splashScreen.hide();
+            });
         });
     };
     MyApp.prototype.openPage = function (page) {
@@ -585,7 +526,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      \n      <ion-title>EasySync</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icon}}" ></ion-icon>\n        {{p.title}} \n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      \n      <ion-title>EasySync</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon name="{{p.icon}}" ></ion-icon>\n        {{p.title}} \n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */],
@@ -607,12 +548,12 @@ var MyApp = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hello_ionic_hello_ionic__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hello_ionic_hello_ionic__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__create_acount_create_acount__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_http__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -668,7 +609,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title><ion-icon name="paper-plane"></ion-icon>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" id="pw" [(ngModel)]="password"v></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div >\n    <button ion-button color="primary" block  (click)="logNew()">LogIn</button>\n    <button ion-button color="dark" block (click)="createAcount()">Create Acount</button>\n  </div>\n  <ion-label floating>{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title><ion-icon name="paper-plane"></ion-icon>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    \n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" id="pw" [(ngModel)]="password"v></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div >\n    <button ion-button color="primary" block  (click)="logNew()">LogIn</button>\n    <button ion-button color="dark" block (click)="createAcount()">Create Acount</button>\n  </div>\n  <ion-label floating>{{errmsg}}</ion-label>\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_http__["a" /* HTTP */], __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["a" /* HttpClient */]])
     ], LoginPage);
@@ -679,14 +620,14 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 50:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -727,7 +668,7 @@ var ItemDetailsPage = (function () {
     };
     ItemDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-item-details',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\item-details\item-details.html"*/'<!--\n  Generated template for the BrowserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n    <ion-navbar>\n      <ion-title>Quick Download</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  \n    <ion-list>\n      <button ion-item *ngFor="let item of items" >\n        <ion-icon name="ios-folder" item-left></ion-icon>\n        {{item.title}}\n        <div class="item-note" item-right>\n          {{item.note}}\n        </div>\n      </button>\n    </ion-list>\n  \n  \n  </ion-content>\n  '/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\item-details\item-details.html"*/,
+            selector: 'page-item-details',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\item-details\item-details.html"*/'<!--\n  Generated template for the BrowserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n    <ion-navbar>\n      <ion-title>Quick Download</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  \n    <ion-list>\n      <button ion-item *ngFor="let item of items" >\n        <ion-icon name="ios-folder" item-left></ion-icon>\n        {{item.title}}\n        <div class="item-note" item-right>\n          {{item.note}}\n        </div>\n      </button>\n    </ion-list>\n  \n  \n  </ion-content>\n  '/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\item-details\item-details.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__["a" /* ImagePicker */]])
     ], ItemDetailsPage);
@@ -738,64 +679,17 @@ var ItemDetailsPage = (function () {
 
 /***/ }),
 
-/***/ 87:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelloIonicPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_image_picker__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__browser_browser__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__item_details_item_details__ = __webpack_require__(50);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var HelloIonicPage = (function () {
-    function HelloIonicPage(imagePicker, navCtrl) {
-        this.imagePicker = imagePicker;
-        this.navCtrl = navCtrl;
-    }
-    HelloIonicPage.prototype.addFiles = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__browser_browser__["a" /* BrowserPage */], {});
-    };
-    HelloIonicPage.prototype.getFiles = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__item_details_item_details__["a" /* ItemDetailsPage */], {});
-    };
-    HelloIonicPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-hello-ionic',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14\src\pages\hello-ionic\hello-ionic.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title> <ion-icon name="paper-plane"></ion-icon> Quick Acces</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n \n    \n    <ion-content>\n        \n    <button ion-button color="dark" (click)="getFiles()"  block>\n      <ion-icon name="paper-plane" ></ion-icon> \'Quick Download\n    </button>\n   \n    <button ion-button color="secondary" (click)="addFiles()"block>\n    Quick Upload\n    </button>\n\n  </ion-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14\src\pages\hello-ionic\hello-ionic.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_image_picker__["a" /* ImagePicker */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */]])
-    ], HelloIonicPage);
-    return HelloIonicPage;
-}());
-
-//# sourceMappingURL=hello-ionic.js.map
-
-/***/ }),
-
-/***/ 89:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -809,10 +703,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AuthService = (function () {
-    function AuthService(http, storage) {
+    function AuthService(http, storage, file) {
         this.http = http;
         this.storage = storage;
+        this.file = file;
         this.host = 'http://192.168.1.4/myphp/newP/inc/';
         this.hostNet = 'http://projecte14.atwebpages.com/inc/';
         console.log('Hello AuthService Provider');
@@ -866,14 +762,81 @@ var AuthService = (function () {
         });
         return false;
     };
+    AuthService.prototype.getLocalList = function () {
+        var _this = this;
+        this.items = [];
+        this.items.push({
+            fName: "ss",
+            url: "D:/ShortSem/Project/MyIonicProject/resources/icon.png"
+        });
+        this.file.listDir("file:///storage/emulated/0/DCIM", "Camera").then(function (results) {
+            for (var i = 0; i < results.length; i++) {
+                console.log('Image URI: ' + results[i]);
+                _this.items.push({
+                    fName: results[i].name,
+                    url: results[i].nativeURL,
+                });
+            }
+        }, function (err) {
+        });
+        return this.items;
+    };
     AuthService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__["a" /* File */]])
     ], AuthService);
     return AuthService;
 }());
 
 //# sourceMappingURL=auth-service.js.map
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelloIonicPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_image_picker__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__browser_browser__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__item_details_item_details__ = __webpack_require__(51);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var HelloIonicPage = (function () {
+    function HelloIonicPage(imagePicker, navCtrl) {
+        this.imagePicker = imagePicker;
+        this.navCtrl = navCtrl;
+    }
+    HelloIonicPage.prototype.addFiles = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__browser_browser__["a" /* BrowserPage */], {});
+    };
+    HelloIonicPage.prototype.getFiles = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__item_details_item_details__["a" /* ItemDetailsPage */], {});
+    };
+    HelloIonicPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-hello-ionic',template:/*ion-inline-start:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\hello-ionic\hello-ionic.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title> <ion-icon name="paper-plane"></ion-icon> Quick Acces</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n \n    \n    <ion-content>\n        \n    <button ion-button color="dark" (click)="getFiles()"  block>\n      <ion-icon name="paper-plane" ></ion-icon> \'Quick Download\n    </button>\n   \n    <button ion-button color="secondary" (click)="addFiles()"block>\n    Quick Upload\n    </button>\n\n  </ion-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\ShortSem\CO227\SyncApp\e14 - Copy\src\pages\hello-ionic\hello-ionic.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_image_picker__["a" /* ImagePicker */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */]])
+    ], HelloIonicPage);
+    return HelloIonicPage;
+}());
+
+//# sourceMappingURL=hello-ionic.js.map
 
 /***/ })
 

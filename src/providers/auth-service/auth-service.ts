@@ -9,7 +9,7 @@ import { HttpErrorResponse } from '@angular/common/http/src/response';
 import { HelloIonicPage } from '../../pages/hello-ionic/hello-ionic';
 
 import {MyApp} from '../../app/app.component';
-
+import { File } from '@ionic-native/file';
 import 'rxjs/add/operator/map';
 
 
@@ -18,7 +18,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthService {
 
-constructor(private http: HttpClient,private storage: Storage  ) {
+constructor(private http: HttpClient,private storage: Storage  ,private file: File) {
     console.log('Hello AuthService Provider');
 }
 
@@ -28,6 +28,7 @@ postData(credentials, type) {
   hostNet='http://projecte14.atwebpages.com/inc/'
   respond:any;
   key:any;
+  items: Array<{fName: string, url: string}>;
 login(username,password){
     this.http.get(this.host+'/log.php?userName='+username+'&password='+password).subscribe(data => {
       console.log(data['username']);
@@ -81,4 +82,20 @@ singUp(  Fname,Lname,userName,password){
   return false;
   }
 
+
+
+  getLocalList(){
+    this.items = [];
+      this.file.listDir("file:///storage/emulated/0/DCIM","Camera").then((results) => {
+        for (var i = 0; i < results.length; i++) {
+            console.log('Image URI: ' + results[i]);
+            this.items.push({
+              fName: results[i].name,
+              url: results[i].nativeURL,
+            });
+        }
+      }, (err) => { 
+      });
+      return this.items;
+    }
   }
