@@ -38,14 +38,17 @@ export class LoginPage {
     logNew(){
        this.storage.get('errorMassege').then(msg=>{
          this.errmsg=msg;
+         this.authService.login(this.username,this.password);
+       }).then(data=>{
+          this.storage.get('uname').then(val=>{
+          if(val!=null){
+           this.navCtrl.setRoot(HelloIonicPage);
+          }
+         
+        });
        });
-       this.authService.login(this.username,this.password);
-       this.storage.get('uname').then(val=>{
-         if(val!=null){
-          this.navCtrl.setRoot(HelloIonicPage);
-         }
-        
-       });
+       
+       
          
        
         
