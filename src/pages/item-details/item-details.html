@@ -21,6 +21,7 @@
         {{item.title}}
         <div class="item-note" item-right>
           {{item.note}}
+          <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>
         </div>
       </button>
     </ion-list>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import {ListPage} from '../list/list';
 import { CreateAcountPage } from '../create-acount/create-acount';
 import { HTTP } from '@ionic-native/http';
 import { Storage } from '@ionic/storage';
@@ -27,7 +28,7 @@ export class LoginPage {
   password = '';
   data = {};
   errmsg='';
-  ip='http://192.168.1.4/myphp/newP/inc/'
+  ip='http://192.168.1.4/MyPhp/newP/inc'
 
   
 
@@ -42,7 +43,7 @@ export class LoginPage {
        }).then(data=>{
           this.storage.get('uname').then(val=>{
           if(val!=null){
-           this.navCtrl.setRoot(HelloIonicPage);
+           this.navCtrl.setRoot(ListPage);
           }
          
         });

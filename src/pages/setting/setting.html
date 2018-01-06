@@ -9,11 +9,29 @@
 
 <ion-content>
     <ion-content>
+        <ion-list>
+        <ion-item>
+                <ion-label> Keep Original at Cloud</ion-label>
+                <ion-toggle [(ngModel)]="cloudSet" ></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label> Keep Original at Device</ion-label>
+            <ion-toggle [(ngModel)]="deviceSet" ></ion-toggle>
+        </ion-item>   
+
+        <ion-item>
+            <button ion-button  block (click)="setup()">Save Settings</button>
+        </ion-item>  
+        <ion-item>
+            <button ion-button clear block>Delete Cloud</button>
+        </ion-item>  
+        <ion-item>
+            <button ion-button  block (click)="deleteAll()">Delete</button>
+        </ion-item>  
 
         <div padding>
           <button ion-button color="dark" block (click)="logout()">Logout</button>
-          
         </div>
-      
+      </ion-list>
        
 </ion-content>

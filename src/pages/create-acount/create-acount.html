@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>Create Account</ion-title>
   </ion-navbar>
 
@@ -36,7 +36,7 @@
          <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
        </ion-item>
  
-       <button ion-button full color="success" (click)="signup()">Sign up</button>
+       <button ion-button full color="secondary" (click)="signup()">Sign up</button>
        <a href="#" (click)="login()">Login Page</a>
      </ion-list>
      <ion-label >{{errmsg}}</ion-label>

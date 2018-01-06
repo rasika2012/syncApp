@@ -13,7 +13,7 @@ import { BrowserPage } from '../pages/browser/browser'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { PhotoLibrary } from '@ionic-native/photo-library';
 import { IonicStorageModule } from '@ionic/storage';
 import { FilePath } from '@ionic-native/file-path';
@@ -24,6 +24,7 @@ import { HTTP } from '@ionic-native/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from '../providers/auth-service/auth-service';
 //import { Http ,Headers} from '@angular/http';
+import { CloudinaryModule, CloudinaryConfiguration, Cloudinary } from '@cloudinary/angular-4.x';
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +41,7 @@ import { AuthService } from '../providers/auth-service/auth-service';
     IonicModule.forRoot(MyApp),
     IonicStorageModule,
     IonicStorageModule.forRoot(),
+    CloudinaryModule.forRoot({ Cloudinary }, { cloud_name: 'dv4fyvxxz' } as CloudinaryConfiguration),
     HttpClientModule
   ],
   bootstrap: [IonicApp],
@@ -60,7 +62,8 @@ import { AuthService } from '../providers/auth-service/auth-service';
     File,
     PhotoLibrary,
     ImagePicker,
-    HTTP,
+    HTTP,FileTransfer,
+    FileTransferObject,
     //Http ,Headers,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
      AuthService
