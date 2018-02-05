@@ -23,26 +23,26 @@ export class MyApp {
   public rootPage = ListPage;
   pages: Array<{title: string, component: any,icon:string}>;
 
- 
-  
-   
+
+
+
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private storage: Storage
-   
+
   ) {
     this.initializeApp();
   var Page:any;
     // set our app's pages
-    
+
     this.pages = [
-      { title: 'One Touch Acces', component: ListPage ,icon: "paper-plane"},
+      { title: 'Pera Sync', component: ListPage ,icon: "paper-plane"},
       //{ title: 'Quick Acces', component: HelloIonicPage,icon: "boat" },
       { title: 'Settings', component: SettingPage,icon: "build" }
-    ]; 
+    ];
   }
 
   initializeApp() {
@@ -52,26 +52,26 @@ export class MyApp {
       this.statusBar.styleDefault();
 
       this.storage.get('settings.keepOriginal.cloud').then((val) => {
-        
+
          if(val==null){
           this.storage.set('settings.keepOriginal.cloud',false);
           this.storage.set('settings.keepOriginal.device',false);
          }
         })
       this.storage.get('uname').then((val) => {
-        
+
          if(val==null){
            console.log('Your uname is', val);
            this.nav.setRoot(LoginPage);
-         
+
          }
      }).then(data=>{
-     
+
      })
      this.splashScreen.hide();
 
-      
-     
+
+
     });
   }
 
@@ -80,21 +80,21 @@ export class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.storage.get('uname').then((val) => {
-        
+
       if(val==null){
         console.log('Your uname is', val);
         this.nav.setRoot(LoginPage);
-      
+
       }
   }).then(data=>{
-  
+
   })
     this.storage.get('uname').then((val) => {
-     
+
     this.nav.setRoot(page.component);
-    
+
   });
-    
-    
+
+
   }
 }

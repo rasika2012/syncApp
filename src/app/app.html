@@ -2,8 +2,8 @@
 
   <ion-header >
     <ion-toolbar color="secondary">
-      
-      <ion-title  >PeraSync</ion-title>
+
+      <ion-title  >Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -11,7 +11,7 @@
     <ion-list>
       <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon name="{{p.icon}}" ></ion-icon>
-        {{p.title}} 
+        {{p.title}}
       </button>
     </ion-list>
   </ion-content>

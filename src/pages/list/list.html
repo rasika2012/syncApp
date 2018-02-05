@@ -1,5 +1,5 @@
-<ion-header >
-  <ion-navbar color="secondary">
+<ion-header>
+  <ion-navbar color="tmp">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,67 +7,72 @@
       <ion-segment [(ngModel)]="dir" small color="light" block>
         <ion-segment-button value="cloud" round>
           <ion-icon name="cloud"></ion-icon>
-           
+
         </ion-segment-button>
         <ion-segment-button value="device" round>
           <ion-icon name="phone-portrait"></ion-icon>
-          
+
         </ion-segment-button>
       </ion-segment>
     </div>
     <!-- <button ion-button small color="light" item-end>{{msgBar}}(Beta)</button> -->
   </ion-navbar>
 
-  
+
 </ion-header>
 
 <ion-content>
   <div [ngSwitch]="dir">
-  <ion-list *ngSwitchDefault>
-    
-    <ion-item *ngFor="let item of itemsCloud">
-      <ion-icon  name="ios-image-outline" item-start></ion-icon>
-      
-      <button ion-button color="dark" (click)="itemTapped($event, item)" clear item-start>
-      <h2>{{item.fName}}</h2>
-      </button>
-       <button ion-button small clear (click)="itemTapped($event, item)" color="secondary" item-end>
-      {{item.uploaded}}</button> 
-      <!-- <ion-icon name=" {{item.uploaded}}" ></ion-icon> -->
-    </ion-item>
-  
- </ion-list>
+    <ion-list *ngSwitchDefault>
 
- <ion-list *ngSwitchCase="'device'">
-    
-    <ion-item *ngFor="let item of itemsLocal">
-      <ion-icon  name="ios-image-outline" item-start></ion-icon>
-      
-      <button ion-button color="dark" (click)="itemTapped($event, item)" clear item-start>
-        <h2>{{item.fName}}</h2>
+      <ion-item *ngFor="let item of itemsCloud">
+        <ion-icon name="ios-image-outline" item-start></ion-icon>
+
+        <button ion-button color="dark" (click)="itemTapped($event, item)" clear item-start>
+          <h2>{{item.fName}}</h2>
         </button>
         <button ion-button small clear (click)="itemTapped($event, item)" color="secondary" item-end>
-      {{item.uploaded}}</button>  
-     
-    </ion-item>
-  
- </ion-list>
+          {{item.uploaded}}
+        </button>
+        <!-- <ion-icon name=" {{item.uploaded}}" ></ion-icon> -->
+      </ion-item>
 
-</div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'device'">
+
+      <ion-item *ngFor="let item of itemsLocal">
+        <ion-icon name="ios-image-outline" item-start></ion-icon>
+
+        <button ion-button color="dark" (click)="itemTapped($event, item)" clear item-start>
+          <h2>{{item.fName}}</h2>
+        </button>
+        <button ion-button small clear (click)="itemTapped($event, item)" color="secondary" item-end>
+          {{item.uploaded}}
+        </button>
+
+      </ion-item>
+
+    </ion-list>
+
+  </div>
 </ion-content>
 <ion-footer>
-   
-       
-          <ion-item color="secondary" block>
-            
-        <button ion-button (click)="upload()" color="light" clear icon-only  item-start>
-            <ion-icon name="cloud-upload"></ion-icon>Upload</button>
-          <button ion-button (click)="download()" color="light" clear   icon-only item-end>
-            Download <ion-icon name="md-download"></ion-icon>
 
-          </button>
-        
-        </ion-item>
-        
-  
-  </ion-footer>
+
+  <ion-item color="secondary" block>
+
+    <button ion-button (click)="upload()" color="light" clear icon-only item-start>
+      <ion-icon name="cloud-upload"></ion-icon>
+      Upload
+    </button>
+    <button ion-button (click)="download()" color="light" clear icon-only item-end>
+      Download
+      <ion-icon name="md-download"></ion-icon>
+
+    </button>
+
+  </ion-item>
+
+
+</ion-footer>

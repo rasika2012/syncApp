@@ -15,29 +15,29 @@
 
 <ion-content padding>
   <ion-list>
-    
-       <ion-item>
-         <ion-label stacked>First Name</ion-label>
-         <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>
-       </ion-item>
- 
-       <ion-item>
-         <ion-label stacked>Last Name</ion-label>
-         <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>
-       </ion-item>
- 
-       <ion-item>
-         <ion-label stacked>Username</ion-label>
-         <ion-input type="text" [(ngModel)]="userData.username"></ion-input>
-       </ion-item>
- 
-       <ion-item>
-         <ion-label stacked>Password</ion-label>
-         <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
-       </ion-item>
- 
-       <button ion-button full color="secondary" (click)="signup()">Sign up</button>
-       <a href="#" (click)="login()">Login Page</a>
-     </ion-list>
-     <ion-label >{{errmsg}}</ion-label>
+
+    <ion-item>
+      <ion-label stacked>First Name</ion-label>
+      <ion-input type="text" [(ngModel)]="userData.fname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)]="userData.lname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="userData.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+    </ion-item>
+
+    <button ion-button full color="secondary" (click)="signup()">Sign up</button>
+    <a href="#" (click)="login()">Login Page</a>
+  </ion-list>
+
 </ion-content>

@@ -5,27 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  
-    <ion-navbar>
-      <ion-title>Quick Download</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
-  
-    <ion-list>
-      <button ion-item *ngFor="let item of items" >
-        <ion-icon name="ios-folder" item-left></ion-icon>
-        {{item.title}}
-        <div class="item-note" item-right>
-          {{item.note}}
-          <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>
-        </div>
-      </button>
-    </ion-list>
-  
-  
-  </ion-content>
-  
+
+  <ion-navbar>
+    <ion-title>Quick Download</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <ion-icon name="ios-folder" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+        <button ion-button clear item-end (click)="itemTapped($event, item)">Local</button>
+      </div>
+    </button>
+  </ion-list>
+
+
+</ion-content>

@@ -2,7 +2,7 @@
 <widget id="io.ionic.starter" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>PeraSync</name>
     <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="hi@ionicframework" href="http://ionicframework.com/">CO227-E14</author>
     <content src="index.html" />
     <access origin="*" subdomains="true" />
     <allow-intent href="http://*/*" />

@@ -36,6 +36,7 @@ $app-direction: ltr;
 $colors: (
   primary:    #a5a5a5,
   secondary:  #0088f7,
+  tmp: #f70014,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       rgb(36, 36, 36)
@@ -70,7 +71,7 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+@import "ionic.theme.dark";
 
 
 // Ionicons
